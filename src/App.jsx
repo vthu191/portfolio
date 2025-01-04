@@ -4,17 +4,18 @@ import Background from './components/background/background'
 import Aboutme from './components/aboutme/Aboutme'
 import Experience from './components/experience/Experience'
 import Technical from './components/technical/Technical'
-
+import Certifications from './components/certification/Certification'
+import Working from './components/school/Working'
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
       <Background />
       <Aboutme />
+      <Working />
       <Technical />
       <Experience />
+      <Certifications /> 
     </>
   )
 }

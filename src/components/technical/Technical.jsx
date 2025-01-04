@@ -1,65 +1,120 @@
 import React from 'https://cdn.skypack.dev/react';
 import "./technical.css"
 
-const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
-const TAGS = ['HTML', 'CSS', 'JavaScript', 'Typescript', 'Tailwind', 'React', 'Next.js', 'Websocket', 'UI/UX', 'Gi', 'animation', 'webdev'];
-const DURATION = 15000;
-const ROWS = 5;
-const TAGS_PER_ROW = 5;
-
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const shuffle = (arr) => [...arr].sort(() => 0.5 - Math.random());
-
-const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
-  return (
-    <div
-      className="loop-slider"
-      style={{
-        '--duration': `${duration}ms`,
-        '--direction': reverse ? 'reverse' : 'normal',
-      }}
-    >
-      <div className="inner">
-        {children}
-        {children}
-      </div>
-    </div>
-  );
-};
-
-const Tag = ({ text }) => (
-  <div className="tag22">
-    <span>#</span> {text}
-  </div>
-);
-
+const technical = [
+  {
+    img: "https://www.vectorlogo.zone/logos/w3_css/w3_css-icon~old.svg",
+    alt: "Logo 1",
+    className: "client-logo w-30 h-20 object-contain"
+  },
+  {
+    img: "https://www.vectorlogo.zone/logos/php/php-ar21.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/nodejs-3.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/github-icon-2.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/gitlab.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+    {
+    img: "https://cdn.worldvectorlogo.com/logos/postman.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/python-4.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/figma-icon.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/mysql-logo-pure.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/jira-3.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/microsoft-sql-server-1.svg",
+    alt: "Logo 1",
+    className: "client-logo w-21 h-20 object-contain"
+  },
+  {
+    img: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg",
+    alt: "Logo 1",
+    className: "client-logo w-20 h-20 object-contain"
+  },
+]
 function Technical() {
     return ( 
-      <div className="app container mb-10">
+      <div className="app container mx-auto px-6 md:px-12 mb-20">
         <div className="inline-block text-center group">
-            <h2 className="text-yellow-400 mb-1 group-hover:text-yellow-300 transition-colors">
-            Technical Skills
-            </h2>
-            <div className="h-1 bg-yellow-400 w-full transition-all group-hover:w-[110%]"></div>
-            <div className="h-1 bg-yellow-400 w-1/3 mt-1 transition-all group-hover:w-1/2 mb-3"></div>
+        <h2 className="inline-block text-center mb-5">
+                    <span>My technicals</span>
+                </h2>
         </div>
-  
-        <div className="tag-list">
-          {[...new Array(ROWS)].map((_, i) => (
-            <InfiniteLoopSlider
-              key={i}
-              duration={random(DURATION - 5000, DURATION + 5000)}
-              reverse={i % 2}
-            >
-              {shuffle(TAGS)
-                .slice(0, TAGS_PER_ROW)
-                .map((tag) => (
-                  <Tag text={tag} key={tag} />
-                ))}
-            </InfiniteLoopSlider>
-          ))}
-          <div className="fade" />
-        </div>
+        <p className="text-white text-5xl mb-8 font-bold opacity-50">Improving technical skills, striving for excellence</p>
+        <div className="logos-marquee mt-5">
+                <div className="home-logo-wrapper">
+                    <div className="grid grid-cols-6 gap-4 animate-marquee">
+                      {technical.map((technical,index) => (
+                         <img key={index}
+                         src={technical.img}
+                         alt={technical.alt}
+                         className={technical.className}
+                     /> 
+                        ) )}
+                    </div>
+                </div>
+            </div>
       </div>
     );
   }

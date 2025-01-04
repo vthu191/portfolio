@@ -36,14 +36,12 @@ function Background() {
     <div className="container mx-auto background wrapper">
     <div className="grid grid-cols-4 gap-2">
         <div className="col-span-2 text">
-            <h1 className=" title-text text-3xl font-bold">
+            <h2 className="mb-3 text-teal-500">Vânn Thư</h2>
+            <h1 className=" title-text text-3xl font-bold mb-8">
             I am a{' '}
-            <span className="text-yellow-400 font-bold">{displayedText}</span>
-            <span className="cursor">|</span>
+            <span className="text-yellow-400 font-bold ">{displayedText}</span>
+
             </h1>
-            <div className="title-text text-3xl-800 font-bold ">
-                <h1>Developer.</h1>
-            </div>
             <div className="flex gap-5">
                 <a href="https://www.facebook.com/vann.thu.974157" target="_blank" rel="noopener noreferrer">
                     <FaFacebook size={30} color="#4267B2" />

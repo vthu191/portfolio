@@ -1,0 +1,50 @@
+
+.infinite-scroll-container {
+    width: 100%;
+    overflow: hidden; /* Hide the overflow to create the scrolling effect */
+    position: relative;
+    background: #1a1a1a; /* Dark background */
+    padding: 20px 0;
+}
+
+/* Wrapper styling */
+.scroll-wrapper {
+    display: flex;
+    gap: 20px;
+    animation: scroll 10s linear infinite; /* Add scrolling animation */
+}
+
+/* Card styling */
+.scroll-card {
+    width:300px;
+    height:300px;
+    min-width: 300px;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    background: #222; /* Optional card background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease;
+}
+
+.scroll-card img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng phần tử cha */
+    height: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều cao phần tử cha */
+    object-fit: cover; 
+    display: block;
+}
+
+/* Hover effect */
+.scroll-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll {
+    from {
+        transform: translateX(0); /* Start from the initial position */
+    }
+    to {
+        transform: translateX(-100%); /* Move to the end */
+    }
+}

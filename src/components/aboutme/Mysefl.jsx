@@ -29,12 +29,10 @@ const aboutMeSections = [
   import { CiPlay1, CiBellOn, CiChat1 } from "react-icons/ci";
   const Myself = () => (
     <div className="col-span-2">
-      <div className="inline-block text-center group">
-        <h2 className="text-yellow-400 mb-1 group-hover:text-yellow-300 transition-colors">
-          About me
-        </h2>
-        <div className="h-1 bg-yellow-400 w-full transition-all group-hover:w-[110%]"></div>
-        <div className="h-1 bg-yellow-400 w-1/3 mt-1 transition-all group-hover:w-1/2 mb-3"></div>
+      <div className="inline-block text-center group mb-5">
+      <h2 className="inline-block text-center mb-5">
+                    <span>About me</span>
+                </h2>
       </div>
   
       {aboutMeSections.map((section, index) => (

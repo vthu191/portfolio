@@ -6,7 +6,6 @@ const Navbar = () => {
 
     const handleNavTriggerClick = () => {
         setIsActive(!isActive);
-        console.log("Clicked menu");
     };
 
     return (
